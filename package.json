@@ -1,0 +1,51 @@
+{
+  "name": "sails-cassandra",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Cassandra adapter for Sails.js",
+  "keywords": [],
+  "dependencies": {
+    "@sailshq/lodash": "^3.10.4",
+    "ajv": "^6.12.2",
+    "async": "2.0.1",
+    "cassandra-driver": "^4.5.2",
+    "grunt": "1.0.1",
+    "machine": "^15.2.2",
+    "waterline-adapter-tests": "^1.0.1",
+    "waterline-utils": "^1.4.2"
+  },
+  "devDependencies": {
+    "@sailshq/eslint": "^4.19.3"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
+    "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anonymous node/sails user/sails-cassandra.git"
+  },
+  "author": "Sebastian Wilke (Heviat Cloud)",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.12"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "waterlineAdapter": {
+    "waterlineVersion": "^0.13.6",
+    "interfaces": [
+      "semantic",
+      "queryable"
+    ],
+    "features": [
+      "crossAdapter",
+      "unique",
+      "autoIncrement.sequential"
+    ]
+  }
+}
