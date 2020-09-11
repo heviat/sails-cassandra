@@ -11,7 +11,7 @@ Strict adherence to an adapter specification enables the (re)use of built-in gen
 
 Currently, this adapter is in the development process. That's why it's not hosted on npm. The only way to install sails-cassandra is to clone this repository and move it into your project's `node_modules` folder. 
 
-After that, you can just configure the adapter like the following in the `config/datastores.js` of Sails:
+After that, you can  configure the adapter just like the following in the `config/datastores.js` of Sails:
 
 ```
 cassandra: {
